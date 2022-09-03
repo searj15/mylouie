@@ -25,7 +25,6 @@ function App() {
               <br></br>
               <br></br>
               <br></br>
-              <br></br>
             </div>
           </div>
           { !isEnvelopeOpen && <h1 className='instruction'>Click envelope to open, a button will appear.</h1>}
