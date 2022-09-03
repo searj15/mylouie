@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   const [isLetterOpen, setLetterOpen] = useState(false)
+  const [isEnvelopeOpen, setEnvelopeOpen] = useState(false)
 
   return (
     <div className="App">
@@ -12,17 +13,23 @@ function App() {
       :
       <div>
         <div className='envelope-container'>
-          <div className="wrapper">
+          <div className="wrapper" onClick={() => setEnvelopeOpen(true)}>
             <div className="lid one"></div>
             <div className="lid two"></div>
-            <div className="envelope" onClick={() => setLetterOpen(true)}></div>
+            <div className="envelope"></div>
             <div className="letter">
               <h1>Hi, Meryll Louise</h1>
               <p>I love you with all my heart <strong className="heart">&#x2764;</strong></p>
-              <div className="btn">Read All</div>
+              <p>This message is for you only, sana magustuhan mo. Basta don't cry while reading this ha? Ang purpose lang ng letter na to is pakiligin ka.</p>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
             </div>
           </div>
-          <h1 className='instruction'>Hold to open, then click the button to see all content</h1>
+          { !isEnvelopeOpen && <h1 className='instruction'>Click envelope to open, a button will appear.</h1>}
+          { isEnvelopeOpen && <div className="btn" onClick={() => setLetterOpen(true)}>Read All</div>}
         </div>
       </div>
       }
