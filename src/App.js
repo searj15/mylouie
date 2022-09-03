@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
+import LetterPage from './components/LetterPage';
 import './App.css';
 
 function App() {
+  const [isLetterOpen, setLetterOpen] = useState(false)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      { isLetterOpen ?
+      <LetterPage />
+      :
+      <div>
+        <div className='envelope-container'>
+          <div className="wrapper">
+            <div className="lid one"></div>
+            <div className="lid two"></div>
+            <div className="envelope" onClick={() => setLetterOpen(true)}></div>
+            <div className="letter">
+              <h1>Hi, Meryll Louise</h1>
+              <p>I love you with all my heart <strong className="heart">&#x2764;</strong></p>
+              <div className="btn">Read All</div>
+            </div>
+          </div>
+          <h1 className='instruction'>Hold to open, then click the button to see all content</h1>
+        </div>
+      </div>
+      }
     </div>
   );
 }
