@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mylouie/static/css/main.17b432ec.css",
-    "main.js": "/mylouie/static/js/main.5c8d9799.js",
+    "main.js": "/mylouie/static/js/main.c59c8fda.js",
     "static/js/787.e2941c40.chunk.js": "/mylouie/static/js/787.e2941c40.chunk.js",
     "static/media/filmstrip.png": "/mylouie/static/media/filmstrip.30c7521db0977b86d36a.png",
     "index.html": "/mylouie/index.html",
     "main.17b432ec.css.map": "/mylouie/static/css/main.17b432ec.css.map",
-    "main.5c8d9799.js.map": "/mylouie/static/js/main.5c8d9799.js.map",
+    "main.c59c8fda.js.map": "/mylouie/static/js/main.c59c8fda.js.map",
     "787.e2941c40.chunk.js.map": "/mylouie/static/js/787.e2941c40.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17b432ec.css",
-    "static/js/main.5c8d9799.js"
+    "static/js/main.c59c8fda.js"
   ]
 }
