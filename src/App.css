@@ -105,6 +105,15 @@
   color: #3B4049;
 }
 
+.display-message {
+  color: white;
+  padding-bottom: 10px;
+}
+
+.btn-container {
+  display: flex;
+}
+
 .btn {
 /*   flex: 1 1 auto; */
   margin: 10px;
@@ -118,9 +127,17 @@
   box-shadow: 0 0 0px #eee;
   border-radius: 10px;
   background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
- }
+}
 
-.btn:hover {
+.btn-yes {
+  background-image: linear-gradient(to right, #4ef583 0%, #a6c1ee 51%, #c2fbd4 100%);
+}
+
+.btn-no {
+  background-image: linear-gradient(to right, #ff0000 0%, #e9eb54 51%, #c32e2e 100%);
+}
+
+.btn:hover, .btn-no:hover, .btn-yes:hover {
   background-position: right center; /* change the direction of the change here */
 }
 
