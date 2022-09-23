@@ -8,10 +8,10 @@ function App() {
   // const [isAbsBtn, setAbsBtn] = useState(false)
   const [counter, setCounter] = useState(0)
 
-  const getRandomPositon = () => {
+  const getRandomPositon = (type) => {
     
-    const min = Math.ceil(-200);
-    const max = Math.floor(70);
+    const min = Math.ceil(type === '_yes' ? -70 : -200);
+    const max = Math.floor(type === '_yes' ? 190 : 70);
     const rand1 = Math.floor(Math.random() * (max - min + 1)) + min;
     const rand2 = Math.floor(Math.random()*(-300 - 100) + 1)
     return {
@@ -19,12 +19,12 @@ function App() {
       rand2
     }
   }
-  
+
   const setButtonPosition = (type) => {
     const {
       rand1,
       rand2
-    } = getRandomPositon()
+    } = getRandomPositon(type)
     const btnNo = document.getElementById(type)
     btnNo.style.transform = `translate(${rand1}px, ${rand2}px)`;
     if (type === '_yes') {
